@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Who We Are", href: "#who-we-are" },
   { label: "Our Ecosystem", href: "#ecosystem" },
   { label: "What We Do", href: "#what-we-do" },
-  { label: "Our Philosophy", href: "#philosophy" },
+  { label: "Portfolio", href: "#portfolio" },
   { label: "Partners", href: "#partners" },
 ];
 

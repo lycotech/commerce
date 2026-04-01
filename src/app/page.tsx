@@ -4,6 +4,7 @@ import TrustStrip from "@/components/TrustStrip";
 import WhoWeAre from "@/components/WhoWeAre";
 import Ecosystem from "@/components/Ecosystem";
 import WhatWeDo from "@/components/WhatWeDo";
+import Portfolio from "@/components/Portfolio";
 import Philosophy from "@/components/Philosophy";
 import WhyUs from "@/components/WhyUs";
 import Partners from "@/components/Partners";
@@ -19,6 +20,7 @@ export default function Home() {
       <WhoWeAre />
       <Ecosystem />
       <WhatWeDo />
+      <Portfolio />
       <Philosophy />
       <WhyUs />
       <Partners />

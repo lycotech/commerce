@@ -34,7 +34,7 @@ export default function WhoWeAre() {
                 className="text-[11px] tracking-[0.3em] uppercase text-[#C9A96E]"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
-                Who We Are
+                Who We Are · Est. 2020
               </span>
             </div>
 
@@ -50,18 +50,22 @@ export default function WhoWeAre() {
               className="text-[15px] leading-[1.85] text-[#f0ede8]/60 mb-5"
               style={{ fontFamily: "var(--font-inter)", fontWeight: 300 }}
             >
-              Commerce Alliance Holdings Limited provides strategic oversight
-              and capital allocation across a growing ecosystem of financial and
-              real asset platforms.
+              Founded in 2020, Commerce Alliance Holdings Limited provides
+              strategic oversight and capital allocation across a growing
+              ecosystem of financial and real asset platforms.
             </p>
             <p
               className="text-[15px] leading-[1.85] text-[#f0ede8]/60 mb-10"
               style={{ fontFamily: "var(--font-inter)", fontWeight: 300 }}
             >
-              We operate at the intersection of investment, infrastructure, and
-              innovation — designing pathways that allow individuals and
-              institutions to participate in opportunities traditionally reserved
-              for a select few.
+              Since inception, we have operated at the intersection of
+              investment, infrastructure, and innovation — designing pathways
+              that allow individuals and institutions to participate in
+              opportunities traditionally reserved for a select few. Today, our
+              real estate portfolio alone exceeds{" "}
+              <span className="text-[#C9A96E] font-medium">₦2 billion</span>{" "}
+              in value, with projects spanning Ikoyi, Gbagada, Osogbo, and a
+              quarry operation in Ogun State.
             </p>
 
             {/* Key lines */}
@@ -106,13 +110,13 @@ export default function WhoWeAre() {
                   className="text-[11px] tracking-[0.25em] uppercase text-[#C9A96E] mb-2"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
-                  Our Mission
+                  Track Record · Since 2020
                 </p>
                 <p
                   className="text-[20px] font-light text-white leading-snug"
                   style={{ fontFamily: "var(--font-cormorant)" }}
                 >
-                  Structuring access to institutional-grade opportunities across Africa.
+                  Over ₦2 billion in real estate assets structured and delivered across Nigeria.
                 </p>
               </div>
             </div>

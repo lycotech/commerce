@@ -6,7 +6,7 @@ const focusAreas = [
     number: "01",
     icon: Building2,
     title: "Real Estate Investment & Development",
-    body: "We structure and execute high-value real estate opportunities designed for both yield and long-term appreciation.",
+    body: "Since 2020, we have structured and executed high-value real estate opportunities with a portfolio exceeding ₦2 billion. Our projects span prime locations including Ikoyi, Gbagada, and Osogbo — complemented by a quarry operation in Ogun State, Nigeria.",
     image:
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=85",
     imageAlt: "Luxury high-rise building",

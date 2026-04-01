@@ -95,10 +95,10 @@ export default function Hero() {
         {/* Stats row */}
         <div className="mt-20 pt-8 border-t border-[#C9A96E]/15 grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in delay-700">
           {[
+            { value: "Est. 2020", label: "Years in Operation" },
+            { value: "₦2B+", label: "Real Estate Portfolio" },
             { value: "2", label: "Operating Subsidiaries" },
-            { value: "4", label: "Core Focus Areas" },
             { value: "Pan‑Africa", label: "Market Reach" },
-            { value: "Structure", label: "Our Foundation" },
           ].map((stat) => (
             <div key={stat.label}>
               <div
