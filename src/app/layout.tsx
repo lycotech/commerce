@@ -28,10 +28,19 @@ export const metadata: Metadata = {
     "Invest-Trust",
     "structured finance",
   ],
+  icons: {
+    icon: [
+      { url: "/logo2.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/logo2.png", type: "image/png" },
+    ],
+  },
   openGraph: {
     title: "Commerce Alliance Holdings Limited",
     description: "We Build the Infrastructure That Powers Wealth.",
     type: "website",
+    images: [{ url: "/logo2.png" }],
   },
 };
 
