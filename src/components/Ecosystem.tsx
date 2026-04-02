@@ -1,30 +1,36 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { BarChart3, Smartphone, Building2 } from "lucide-react";
 
 const entities = [
   {
-    tag: "01",
-    name: "Pennyvest",
-    role: "Technology Platform",
-    description:
-      "A technology-driven platform enabling access to fractional real estate and curated investment opportunities.",
-    highlight: "Fractional Real Estate · Curated Investments",
-  },
-  {
-    tag: "02",
+    icon: BarChart3,
     name: "Invest-Trust Asset Management Limited",
-    role: "Licensed Asset Manager",
+    abbr: "ITAML",
+    role: "Regulated Asset Manager",
     description:
-      "A licensed asset management company providing structured investment solutions across fixed income, equities, and alternative assets.",
-    highlight: "Fixed Income · Equities · Alternatives",
+      "A regulated asset management firm providing portfolio management, wealth advisory, and structured investment products for individuals, corporates, and institutions.",
+    highlight: ["Portfolio Management", "Wealth Advisory", "Structured Investment Products"],
+    serves: "Individuals · Corporates · Institutions",
   },
   {
-    tag: "03",
-    name: "Commerce Alliance (Core)",
-    role: "Strategic Engine",
+    icon: Smartphone,
+    name: "Pennyvest Technologies",
+    abbr: null,
+    role: "Digital Investment Platform",
     description:
-      "The strategic engine — responsible for capital allocation, deal structuring, and execution across the ecosystem.",
-    highlight: "Capital Allocation · Deal Structuring · Execution",
+      "A digital investment platform democratizing access to wealth creation through fractional ownership, real estate investments, and income-generating assets.",
+    highlight: ["Fractional Ownership", "Real Estate Investments", "Income-Generating Assets"],
+    serves: "Retail Investors · Mass Market",
+  },
+  {
+    icon: Building2,
+    name: "Commerce Alliance Real Assets",
+    abbr: null,
+    role: "Real Estate & Asset Division",
+    description:
+      "Focused on real estate development, asset acquisition, and structured property investments designed to deliver consistent returns and capital appreciation.",
+    highlight: ["Real Estate Development", "Asset Acquisition", "Structured Property Investments"],
+    serves: "Developers · Institutional Partners",
   },
 ];
 
@@ -44,85 +50,125 @@ export default function Ecosystem() {
       </div>
 
       {/* Gold ambient glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#C9A96E]/04 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#C9A96E]/04 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-8 h-[1px] bg-[#C9A96E]/50" />
-            <span
-              className="text-[11px] tracking-[0.3em] uppercase text-[#C9A96E]"
-              style={{ fontFamily: "var(--font-inter)" }}
-            >
-              Our Ecosystem
-            </span>
-            <div className="w-8 h-[1px] bg-[#C9A96E]/50" />
-          </div>
-          <h2
-            className="text-4xl md:text-5xl lg:text-[56px] font-light text-white leading-[1.1]"
-            style={{ fontFamily: "var(--font-cormorant)" }}
-          >
-            An Integrated{" "}
-            <span className="gold-text font-semibold">Wealth Ecosystem</span>
-          </h2>
-        </div>
 
-        {/* Entity cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {entities.map((entity) => (
-            <div
-              key={entity.tag}
-              className="group relative border border-[#C9A96E]/15 hover:border-[#C9A96E]/40 bg-gradient-to-b from-[#111318]/80 to-[#08080A]/80 backdrop-blur-sm p-8 transition-all duration-400 hover:-translate-y-1"
-            >
-              {/* Tag */}
+        {/* ── Header ── */}
+        <div className="grid lg:grid-cols-2 gap-10 items-end mb-16">
+          <div>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-8 h-[1px] bg-[#C9A96E]/50" />
               <span
-                className="text-[60px] font-bold text-[#C9A96E]/06 absolute top-4 right-6 leading-none select-none"
-                style={{ fontFamily: "var(--font-cormorant)" }}
+                className="text-[11px] tracking-[0.3em] uppercase text-[#C9A96E]"
+                style={{ fontFamily: "var(--font-inter)" }}
               >
-                {entity.tag}
+                Our Ecosystem
               </span>
-
-              {/* Content */}
-              <div className="relative z-10">
-                <span
-                  className="text-[10px] tracking-[0.3em] uppercase text-[#C9A96E]/60 mb-3 block"
-                  style={{ fontFamily: "var(--font-inter)" }}
-                >
-                  {entity.role}
-                </span>
-
-                <h3
-                  className="text-[22px] font-semibold text-white mb-4 leading-snug"
-                  style={{ fontFamily: "var(--font-cormorant)" }}
-                >
-                  {entity.name}
-                </h3>
-
-                <div className="w-8 h-[1px] bg-[#C9A96E]/40 mb-4 group-hover:w-16 transition-all duration-300" />
-
-                <p
-                  className="text-[14px] leading-[1.8] text-[#f0ede8]/55 mb-6"
-                  style={{ fontFamily: "var(--font-inter)", fontWeight: 300 }}
-                >
-                  {entity.description}
-                </p>
-
-                <p
-                  className="text-[11px] tracking-[0.1em] text-[#C9A96E]/70"
-                  style={{ fontFamily: "var(--font-inter)" }}
-                >
-                  {entity.highlight}
-                </p>
-              </div>
-
-              {/* Bottom accent */}
-              <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#C9A96E]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-          ))}
+            <h2
+              className="text-4xl md:text-5xl lg:text-[56px] font-light text-white leading-[1.1]"
+              style={{ fontFamily: "var(--font-cormorant)" }}
+            >
+              An Integrated{" "}
+              <span className="gold-text font-semibold">Wealth Ecosystem</span>
+            </h2>
+          </div>
+          <div>
+            <p
+              className="text-[15px] leading-[1.85] text-[#f0ede8]/50"
+              style={{ fontFamily: "var(--font-inter)", fontWeight: 300 }}
+            >
+              We operate through a growing network of specialized subsidiaries —
+              each purpose-built to serve a distinct segment of the investment
+              landscape, unified under one strategic holding structure.
+            </p>
+          </div>
         </div>
 
-        {/* Closing line */}
+        {/* ── Entity cards ── */}
+        <div className="grid md:grid-cols-3 gap-6 mb-14">
+          {entities.map((entity) => {
+            const Icon = entity.icon;
+            return (
+              <div
+                key={entity.name}
+                className="group relative border border-[#C9A96E]/15 hover:border-[#C9A96E]/40 bg-gradient-to-b from-[#111318]/90 to-[#08080A]/90 backdrop-blur-sm transition-all duration-400 hover:-translate-y-1 flex flex-col overflow-hidden"
+              >
+                {/* Top accent bar — fills on hover */}
+                <div className="h-[2px] w-0 group-hover:w-full bg-gradient-to-r from-[#C9A96E] to-[#A07840] transition-all duration-500" />
+
+                {/* Content */}
+                <div className="relative z-10 p-8 flex flex-col flex-1">
+
+                  {/* Icon + Role */}
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-9 h-9 border border-[#C9A96E]/25 flex items-center justify-center group-hover:border-[#C9A96E]/55 transition-colors duration-300 shrink-0">
+                      <Icon size={16} className="text-[#C9A96E]/70 group-hover:text-[#C9A96E] transition-colors duration-300" />
+                    </div>
+                    <span
+                      className="text-[10px] tracking-[0.28em] uppercase text-[#C9A96E]/60"
+                      style={{ fontFamily: "var(--font-inter)" }}
+                    >
+                      {entity.role}
+                    </span>
+                  </div>
+
+                  {/* Name + Abbr */}
+                  <h3
+                    className="text-[22px] font-semibold text-white leading-snug mb-1"
+                    style={{ fontFamily: "var(--font-cormorant)" }}
+                  >
+                    {entity.name}
+                  </h3>
+                  {entity.abbr && (
+                    <span
+                      className="text-[11px] tracking-[0.2em] text-[#C9A96E]/50 mb-4 block"
+                      style={{ fontFamily: "var(--font-inter)" }}
+                    >
+                      ({entity.abbr})
+                    </span>
+                  )}
+
+                  <div className="w-8 h-[1px] bg-[#C9A96E]/35 mb-5 mt-2 group-hover:w-16 transition-all duration-300" />
+
+                  {/* Description */}
+                  <p
+                    className="text-[14px] leading-[1.85] text-[#f0ede8]/55 mb-6 flex-1"
+                    style={{ fontFamily: "var(--font-inter)", fontWeight: 300 }}
+                  >
+                    {entity.description}
+                  </p>
+
+                  {/* Service tags */}
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {entity.highlight.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[10px] tracking-[0.1em] border border-[#C9A96E]/20 text-[#C9A96E]/65 px-3 py-1"
+                        style={{ fontFamily: "var(--font-inter)" }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Serves line */}
+                  <div className="border-t border-[#C9A96E]/10 pt-4">
+                    <span
+                      className="text-[10px] tracking-[0.15em] uppercase text-[#f0ede8]/30"
+                      style={{ fontFamily: "var(--font-inter)" }}
+                    >
+                      Serves: {entity.serves}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* ── Closing line ── */}
         <div className="text-center border-t border-[#C9A96E]/10 pt-10">
           <p
             className="text-[15px] text-[#f0ede8]/50 max-w-2xl mx-auto"
@@ -134,6 +180,7 @@ export default function Ecosystem() {
             <span className="text-[#C9A96E]">at scale</span>.
           </p>
         </div>
+
       </div>
     </section>
   );

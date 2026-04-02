@@ -2,13 +2,15 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Who We Are", href: "#who-we-are" },
-  { label: "Our Ecosystem", href: "#ecosystem" },
-  { label: "What We Do", href: "#what-we-do" },
+  { label: "Ecosystem", href: "#ecosystem" },
   { label: "Portfolio", href: "#portfolio" },
-  { label: "Partners", href: "#partners" },
+  { label: "Our Edge", href: "#our-edge" },
+  { label: "Leadership", href: "#founder" },
+  { label: "Partner", href: "#partners" },
 ];
 
 export default function Navbar() {
@@ -25,34 +27,31 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#08080A]/95 backdrop-blur-md border-b border-[#C9A96E]/10 py-3"
-          : "bg-transparent py-6"
+          ? "bg-[#08080A]/96 backdrop-blur-md border-b border-[#C9A96E]/10 py-2"
+          : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#" className="flex flex-col leading-none group">
-          <span
-            className="text-[11px] tracking-[0.3em] uppercase text-[#C9A96E]/70 font-light"
-            style={{ fontFamily: "var(--font-inter)" }}
-          >
-            Commerce Alliance
-          </span>
-          <span
-            className="text-[18px] font-semibold tracking-[0.05em] text-white"
-            style={{ fontFamily: "var(--font-cormorant)" }}
-          >
-            Holdings Limited
-          </span>
+
+        {/* ── Logo ── */}
+        <a href="#" className="flex items-center shrink-0" aria-label="Commerce Alliance Holdings Limited">
+          <Image
+            src="/logo2.png"
+            alt="Commerce Alliance Holdings Limited"
+            width={155}
+            height={62}
+            className="object-contain object-left"
+            priority
+          />
         </a>
 
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
+        {/* ── Desktop Nav ── */}
+        <nav className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-[12px] tracking-[0.15em] uppercase text-[#f0ede8]/60 hover:text-[#C9A96E] transition-colors duration-300"
+              className="text-[11px] tracking-[0.15em] uppercase text-[#f0ede8]/55 hover:text-[#C9A96E] transition-colors duration-300"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               {link.label}
@@ -60,16 +59,16 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* CTA */}
+        {/* ── CTA ── */}
         <a
           href="#partners"
-          className="hidden lg:block btn-gold text-[11px] tracking-[0.2em] uppercase font-medium text-[#08080A] px-6 py-3 rounded-none"
+          className="hidden lg:block btn-gold text-[11px] tracking-[0.2em] uppercase font-medium text-[#08080A] px-6 py-3"
           style={{ fontFamily: "var(--font-inter)" }}
         >
           Partner With Us
         </a>
 
-        {/* Mobile hamburger */}
+        {/* ── Mobile hamburger ── */}
         <button
           className="lg:hidden text-white p-2"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -79,7 +78,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* ── Mobile Menu ── */}
       {menuOpen && (
         <div className="lg:hidden bg-[#0D1117]/98 backdrop-blur-md border-t border-[#C9A96E]/10 px-6 py-6 flex flex-col gap-5">
           {navLinks.map((link) => (

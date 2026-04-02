@@ -39,24 +39,34 @@ export default function Hero() {
 
           {/* Main headline */}
           <h1
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-[82px] font-light leading-[1.05] tracking-[-0.01em] text-white mb-6 animate-fade-in-up"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-[78px] font-light leading-[1.05] tracking-[-0.01em] text-white mb-6 animate-fade-in-up"
             style={{ fontFamily: "var(--font-cormorant)" }}
           >
-            We Build the{" "}
+            Building Africa's{" "}
             <br className="hidden sm:block" />
+            <span className="gold-text font-semibold">Financial</span> and{" "}
+            <br className="hidden sm:block" />
+            Real Asset{" "}
             <span className="gold-text font-semibold">Infrastructure</span>
-            <br className="hidden sm:block" />
-            That Powers Wealth.
           </h1>
 
           {/* Subheadline */}
           <p
-            className="text-base md:text-lg text-[#f0ede8]/65 leading-relaxed max-w-2xl mb-3 animate-fade-in-up delay-200"
+            className="text-base md:text-lg text-[#f0ede8]/65 leading-relaxed max-w-2xl mb-4 animate-fade-in-up delay-200"
             style={{ fontFamily: "var(--font-inter)", fontWeight: 300 }}
           >
             Commerce Alliance Holdings Limited is a multi-sector investment
-            holding company structuring access to real estate, financial
-            markets, and institutional-grade opportunities across Africa.
+            group driving asset management, real estate development, and capital
+            solutions across Nigeria and global markets.
+          </p>
+
+          {/* Second subtext line */}
+          <p
+            className="text-base md:text-lg text-[#f0ede8]/50 leading-relaxed max-w-2xl mb-3 animate-fade-in-up delay-300"
+            style={{ fontFamily: "var(--font-inter)", fontWeight: 300 }}
+          >
+            We structure, deploy, and manage capital across opportunities that
+            create long-term value, sustainable income, and generational wealth.
           </p>
 
           {/* Positioning line */}
@@ -75,11 +85,11 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-500">
             <a
-              href="#what-we-do"
+              href="#ecosystem"
               className="btn-gold inline-flex items-center justify-center gap-2 text-[#08080A] font-semibold text-[13px] tracking-[0.15em] uppercase px-8 py-4"
               style={{ fontFamily: "var(--font-inter)" }}
             >
-              Explore Opportunities
+              Explore Our Ecosystem
               <ArrowRight size={15} />
             </a>
             <a
