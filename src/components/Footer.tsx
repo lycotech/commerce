@@ -23,9 +23,9 @@ const footerLinks = [
   {
     heading: "Subsidiaries",
     links: [
-      { label: "Invest-Trust Asset Management (ITAML)", href: "#ecosystem" },
-      { label: "Pennyvest Financial Services Limited", href: "#ecosystem" },
-      { label: "Commerce Alliance Project Solutions (CAPS)", href: "#ecosystem" },
+      { label: "Invest-Trust Asset Management (ITAML)", href: "https://investtrustasset.com", external: true },
+      { label: "Pennyvest Financial Services Limited", href: "https://pennyvest.io", external: true },
+      { label: "Commerce Alliance Project Solutions (CAPS)", href: "#ecosystem", external: false },
     ],
   },
   {
@@ -131,6 +131,9 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
+                      {...("external" in link && link.external
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
                       className="text-[12px] text-[#f0ede8]/40 hover:text-[#C9A96E] transition-colors duration-200 leading-relaxed block"
                       style={{ fontFamily: "var(--font-inter)" }}
                     >

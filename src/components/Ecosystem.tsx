@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BarChart3, Smartphone, Building2 } from "lucide-react";
+import { BarChart3, Smartphone, Building2, ExternalLink } from "lucide-react";
 
 const entities = [
   {
@@ -11,6 +11,8 @@ const entities = [
       "An SEC licensed fund and portfolio management firm providing portfolio management, wealth advisory, and structured investment products for individuals, corporates, and institutions.",
     highlight: ["Portfolio Management", "Wealth Advisory", "Structured Investment Products"],
     serves: "Individuals · Corporates · Institutions",
+    website: "https://investtrustasset.com",
+    websiteLabel: "investtrustasset.com",
   },
   {
     icon: Smartphone,
@@ -21,6 +23,8 @@ const entities = [
       "A digital investment platform democratizing access to wealth creation through fractional ownership, real estate investments, and income-generating assets.",
     highlight: ["Fractional Ownership", "Real Estate Investments", "Income-Generating Assets"],
     serves: "Retail Investors · Mass Market",
+    website: "https://pennyvest.io",
+    websiteLabel: "pennyvest.io",
   },
   {
     icon: Building2,
@@ -31,6 +35,8 @@ const entities = [
       "Focused on real estate development, asset acquisition, and structured property investments designed to deliver consistent returns and capital appreciation.",
     highlight: ["Real Estate Development", "Asset Acquisition", "Structured Property Investments"],
     serves: "Developers · Institutional Partners",
+    website: null,
+    websiteLabel: null,
   },
 ];
 
@@ -153,14 +159,29 @@ export default function Ecosystem() {
                     ))}
                   </div>
 
-                  {/* Serves line */}
-                  <div className="border-t border-[#C9A96E]/10 pt-4">
+                  {/* Serves line + website link */}
+                  <div className="border-t border-[#C9A96E]/10 pt-4 flex items-center justify-between gap-3">
                     <span
                       className="text-[10px] tracking-[0.15em] uppercase text-[#f0ede8]/30"
                       style={{ fontFamily: "var(--font-inter)" }}
                     >
                       Serves: {entity.serves}
                     </span>
+                    {entity.website && (
+                      <a
+                        href={entity.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-[10px] tracking-[0.1em] text-[#C9A96E]/60 hover:text-[#C9A96E] transition-colors duration-200 shrink-0 group/link"
+                        style={{ fontFamily: "var(--font-inter)" }}
+                      >
+                        <span>{entity.websiteLabel}</span>
+                        <ExternalLink
+                          size={10}
+                          className="opacity-60 group-hover/link:opacity-100 transition-opacity"
+                        />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
