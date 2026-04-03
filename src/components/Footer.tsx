@@ -23,9 +23,9 @@ const footerLinks = [
   {
     heading: "Subsidiaries",
     links: [
-      { label: "Invest-Trust Asset Mgmt (ITAML)", href: "#ecosystem" },
-      { label: "Pennyvest Technologies", href: "#ecosystem" },
-      { label: "Commerce Alliance Real Assets", href: "#ecosystem" },
+      { label: "Invest-Trust Asset Management (ITAML)", href: "#ecosystem" },
+      { label: "Pennyvest Financial Services Limited", href: "#ecosystem" },
+      { label: "Commerce Alliance Project Solutions (CAPS)", href: "#ecosystem" },
     ],
   },
   {

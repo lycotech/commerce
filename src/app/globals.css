@@ -152,3 +152,117 @@ body {
   background: rgba(201, 169, 110, 0.1);
   border-color: #C9A96E;
 }
+
+/* ─────────────────────────────────────────────
+   SCROLL REVEAL SYSTEM
+   Add data-reveal="fade-up|fade-in|fade-left|fade-right|scale"
+   and optionally data-delay="200" (ms) to any element.
+───────────────────────────────────────────── */
+
+/* Base state — hidden before reveal */
+[data-reveal] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  transition-duration: 0.85s;
+  will-change: opacity, transform;
+}
+
+[data-reveal="fade-up"]    { transform: translateY(40px); }
+[data-reveal="fade-down"]  { transform: translateY(-30px); }
+[data-reveal="fade-left"]  { transform: translateX(-40px); }
+[data-reveal="fade-right"] { transform: translateX(40px); }
+[data-reveal="fade-in"]    { transform: none; }
+[data-reveal="scale"]      { transform: scale(0.94); }
+[data-reveal="scale-up"]   { transform: scale(0.94) translateY(20px); }
+
+/* Revealed state */
+[data-reveal].revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* ─────────────────────────────────────────────
+   EXTRA KEYFRAME ANIMATIONS
+───────────────────────────────────────────── */
+
+/* Gold shimmer sweep */
+@keyframes goldShimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #C9A96E 0%,
+    #E8D5A3 30%,
+    #C9A96E 50%,
+    #A07840 70%,
+    #C9A96E 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShimmer 4s linear infinite;
+}
+
+/* Slow float */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+.float-slow { animation: floatY 6s ease-in-out infinite; }
+
+/* Pulse glow ring */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201,169,110,0.3); }
+  50%       { box-shadow: 0 0 0 12px rgba(201,169,110,0); }
+}
+.glow-pulse { animation: glowPulse 2.5s ease-in-out infinite; }
+
+/* Spin slow (used on decorative elements) */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Line expand */
+@keyframes lineExpand {
+  from { width: 0; opacity: 0; }
+  to   { width: 100%; opacity: 1; }
+}
+
+/* Counter fade in */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Page cursor glow — subtle gold dot */
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: #C9A96E;
+  border-radius: 50%;
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.1s ease;
+  box-shadow: 0 0 8px rgba(201,169,110,0.6);
+}
+
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(201,169,110,0.4);
+  border-radius: 50%;
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  z-index: 9997;
+  transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+}

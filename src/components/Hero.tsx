@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import FloatingParticles from "@/components/FloatingParticles";
 
 export default function Hero() {
   return (
@@ -14,11 +15,14 @@ export default function Hero() {
           className="object-cover object-center"
           unoptimized
         />
-        {/* Dark overlay with gold tint — 78% dark */}
+        {/* Dark overlay with gold tint */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#08080A]/60 via-[#0a0700]/75 to-[#08080A]/95" />
         {/* Subtle gold atmosphere */}
         <div className="absolute inset-0 bg-gradient-to-tr from-[#C9A96E]/05 via-transparent to-transparent" />
       </div>
+
+      {/* Floating gold particles */}
+      <FloatingParticles />
 
       {/* Decorative left accent */}
       <div className="absolute left-0 top-1/4 bottom-1/4 w-[1px] bg-gradient-to-b from-transparent via-[#C9A96E]/30 to-transparent hidden lg:block" />
@@ -44,10 +48,10 @@ export default function Hero() {
           >
             Building Africa's{" "}
             <br className="hidden sm:block" />
-            <span className="gold-text font-semibold">Financial</span> and{" "}
+            <span className="gold-shimmer font-semibold">Financial</span> and{" "}
             <br className="hidden sm:block" />
             Real Asset{" "}
-            <span className="gold-text font-semibold">Infrastructure</span>
+            <span className="gold-shimmer font-semibold">Infrastructure</span>
           </h1>
 
           {/* Subheadline */}

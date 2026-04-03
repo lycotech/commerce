@@ -6,15 +6,15 @@ const entities = [
     icon: BarChart3,
     name: "Invest-Trust Asset Management Limited",
     abbr: "ITAML",
-    role: "Regulated Asset Manager",
+    role: "SEC Licensed Fund/Portfolio Manager",
     description:
-      "A regulated asset management firm providing portfolio management, wealth advisory, and structured investment products for individuals, corporates, and institutions.",
+      "An SEC licensed fund and portfolio management firm providing portfolio management, wealth advisory, and structured investment products for individuals, corporates, and institutions.",
     highlight: ["Portfolio Management", "Wealth Advisory", "Structured Investment Products"],
     serves: "Individuals · Corporates · Institutions",
   },
   {
     icon: Smartphone,
-    name: "Pennyvest Technologies",
+    name: "Pennyvest Financial Services Limited",
     abbr: null,
     role: "Digital Investment Platform",
     description:
@@ -24,9 +24,9 @@ const entities = [
   },
   {
     icon: Building2,
-    name: "Commerce Alliance Real Assets",
-    abbr: null,
-    role: "Real Estate & Asset Division",
+    name: "Commerce Alliance Project Solutions Limited",
+    abbr: "CAPS",
+    role: "Project & Real Asset Solutions",
     description:
       "Focused on real estate development, asset acquisition, and structured property investments designed to deliver consistent returns and capital appreciation.",
     highlight: ["Real Estate Development", "Asset Acquisition", "Structured Property Investments"],
