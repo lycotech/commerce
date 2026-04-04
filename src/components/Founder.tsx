@@ -24,7 +24,7 @@ export default function Founder() {
             {/* Decorative frame */}
             <div className="relative h-[520px] w-full max-w-md mx-auto lg:mx-0">
               <Image
-                src="/9.png"
+                src="/ceo.jpeg"
                 alt="Adeniran Adewole — Group Chief Executive, Commerce Alliance Holdings Limited"
                 fill
                 className="object-cover object-[center_15%]"
