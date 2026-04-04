@@ -16,6 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.commerceallianceholdings.com"),
   title: "Commerce Alliance Holdings Limited",
   description:
     "A multi-sector investment holding company structuring access to real estate, financial markets, and institutional-grade opportunities across Africa.",
@@ -28,6 +29,9 @@ export const metadata: Metadata = {
     "Invest-Trust",
     "structured finance",
   ],
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/logo2.png", type: "image/png" },
@@ -39,8 +43,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Commerce Alliance Holdings Limited",
     description: "We Build the Infrastructure That Powers Wealth.",
+    url: "/",
+    siteName: "Commerce Alliance Holdings",
     type: "website",
     images: [{ url: "/logo2.png" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Commerce Alliance Holdings Limited",
+    description: "We Build the Infrastructure That Powers Wealth.",
+    images: ["/logo2.png"],
   },
 };
 
@@ -49,9 +61,28 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Commerce Alliance Holdings Limited",
+    url: "https://www.commerceallianceholdings.com",
+    logo: "https://www.commerceallianceholdings.com/logo2.png",
+    description:
+      "A multi-sector investment holding company structuring access to real estate, financial markets, and institutional-grade opportunities across Africa.",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "ade@commerceallianceholdings.com",
+      contactType: "Customer Service",
+    },
+  };
+
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <body className="antialiased bg-[#08080A] text-[#f0ede8]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
